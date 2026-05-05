@@ -1,0 +1,96 @@
+{
+	"format": "page",
+	"id": "article_blog",
+	"label": "Article: Blog",
+	"repeatable": true,
+	"status": true,
+	"json": {
+		"Main": {
+			"title": {
+				"type": "Text",
+				"config": {
+					"label": "Title",
+					"placeholder": ""
+				}
+			},
+			"uid": {
+				"config": {
+					"label": "Slug",
+					"placeholder": ""
+				},
+				"type": "UID"
+			},
+			"featured_image": {
+				"type": "Image",
+				"config": {
+					"label": "Featured Image",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"date": {
+				"type": "Date",
+				"config": {
+					"label": "Date",
+					"placeholder": ""
+				}
+			},
+			"category": {
+				"type": "Select",
+				"config": {
+					"label": "Category",
+					"placeholder": "",
+					"options": ["Concept / Choreography", "Music"]
+				}
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {}
+				}
+			}
+		},
+		"SEO": {
+			"meta_title": {
+				"type": "Text",
+				"config": {
+					"label": "Meta Title",
+					"placeholder": ""
+				}
+			},
+			"meta_description": {
+				"type": "Text",
+				"config": {
+					"label": "Meta Description",
+					"placeholder": ""
+				}
+			},
+			"og_title": {
+				"type": "Text",
+				"config": {
+					"label": "OG Title",
+					"placeholder": ""
+				}
+			},
+			"og_description": {
+				"type": "Text",
+				"config": {
+					"label": "OG Description",
+					"placeholder": ""
+				}
+			},
+			"og_image": {
+				"type": "Image",
+				"config": {
+					"label": "OG Image",
+					"constraint": {
+						"width": 1200,
+						"height": 627
+					},
+					"thumbnails": []
+				}
+			}
+		}
+	}
+}

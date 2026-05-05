@@ -1,0 +1,50 @@
+{
+	"id": "navigation",
+	"label": "Navigation",
+	"repeatable": true,
+	"status": true,
+	"format": "custom",
+	"json": {
+		"Main": {
+			"name": {
+				"type": "StructuredText",
+				"config": {
+					"label": "Name",
+					"placeholder": "Name...",
+					"allowTargetBlank": false,
+					"single": "paragraph"
+				}
+			},
+			"uid": {
+				"type": "UID",
+				"config": {
+					"label": "UID",
+					"placeholder": "UID..."
+				}
+			},
+			"navigation_groups": {
+				"type": "Group",
+				"config": {
+					"label": "Navigation Groups",
+					"fields": {
+						"navigation_group": {
+							"type": "Link",
+							"config": {
+								"label": "Navigation Group",
+								"select": "document",
+								"customtypes": ["navigation_group"]
+							}
+						}
+					}
+				}
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {}
+				}
+			}
+		}
+	}
+}

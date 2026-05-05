@@ -1,0 +1,12 @@
+node_modules/
+dist/
+plugins/
+api/
+store/
+.nuxt/
+routes.json
+.env
+middleware/
+static/sw.js
+
+package-lock.json

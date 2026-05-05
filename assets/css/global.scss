@@ -1,0 +1,48 @@
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    line-height: 1.2;
+    // font-family: "";
+    font-size: 4.8vw; // 18px
+    @screen sm {
+      font-size: 2.343vw; //18px
+    }
+    @screen md {
+      font-size: 0.9375vw; //18px
+    }
+    @screen lg {
+      font-size: 0.9375vw; // 18px
+    }
+
+    // @apply font-montserrat;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  .swiper {
+    perspective: 1000px;
+  }
+
+  picture,
+  img {
+    object-fit: cover;
+    height: auto;
+    // min-width: 100%;
+    // min-height: 100%;
+  }
+
+  picture {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .indented {
+    text-indent: -10000px;
+  }
+}

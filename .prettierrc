@@ -1,0 +1,12 @@
+{
+  "semi": false,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "prettier.useTabs": true,
+  "bracketSameLine": true,
+  "trailingComma": "none",
+  "vueIndentScriptAndStyle": true,
+  "singleAttributePerLine": true,
+  "useTabs": false,
+  "printWidth": 90
+}

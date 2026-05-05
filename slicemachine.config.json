@@ -1,0 +1,7 @@
+{
+  "apiEndpoint": "https://cachely-io.cdn.prismic.io/api/v2",
+  "repositoryName": "cachely-io",
+  "adapter": "@slicemachine/adapter-nuxt",
+  "libraries": ["./slices"],
+  "localSliceSimulatorURL": "http://localhost:3011/slice-simulator"
+}

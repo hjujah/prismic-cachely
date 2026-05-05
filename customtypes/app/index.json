@@ -1,0 +1,90 @@
+{
+	"id": "app",
+	"label": "App",
+	"repeatable": false,
+	"status": true,
+	"format": "custom",
+	"json": {
+		"Main": {
+			"main_navigation": {
+				"type": "Link",
+				"config": {
+					"label": "Main Navigation",
+					"select": "document",
+					"customtypes": ["navigation"]
+				}
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {}
+				}
+			}
+		},
+		"Socials": {
+			"social_youtube": {
+				"type": "Text",
+				"config": {
+					"label": "Youtube",
+					"placeholder": "Youtube..."
+				}
+			},
+			"social_twitter": {
+				"type": "Text",
+				"config": {
+					"label": "Twitter",
+					"placeholder": "Twitter..."
+				}
+			},
+			"social_facebook": {
+				"type": "Text",
+				"config": {
+					"label": "Facebook",
+					"placeholder": "Facebook..."
+				}
+			},
+			"social_instagram": {
+				"type": "Text",
+				"config": {
+					"label": "Instagram",
+					"placeholder": "Instagram..."
+				}
+			},
+			"social_medium": {
+				"type": "Text",
+				"config": {
+					"label": "Medium",
+					"placeholder": "Medium"
+				}
+			},
+			"social_linkedin": {
+				"type": "Text",
+				"config": {
+					"label": "Linkedin",
+					"placeholder": "Linkedin..."
+				}
+			}
+		},
+		"Header": {
+			"header_navigation": {
+				"type": "Link",
+				"config": {
+					"label": "Header Navigation",
+					"select": "document",
+					"customtypes": ["navigation"]
+				}
+			}
+		},
+		"Footer": {
+			"footer_navigation": {
+				"type": "Link",
+				"config": {
+					"label": "Footer Navigation",
+					"select": "document",
+					"customtypes": ["navigation"]
+				}
+			}
+		}
+	}
+}

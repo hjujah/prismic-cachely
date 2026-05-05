@@ -1,0 +1,63 @@
+{
+	"id": "navigation_group",
+	"label": "Navigation Group",
+	"repeatable": true,
+	"status": true,
+	"format": "custom",
+	"json": {
+		"Main": {
+			"title": {
+				"type": "Text",
+				"config": {
+					"label": "Title",
+					"placeholder": ""
+				}
+			},
+			"link": {
+				"type": "Link",
+				"config": {
+					"label": "Link",
+					"placeholder": "",
+					"select": null
+				}
+			},
+			"anchor_to": {
+				"type": "Text",
+				"config": {
+					"label": "Anchor to",
+					"placeholder": "Used to scroll to section with that id"
+				}
+			},
+			"query_field": {
+				"type": "Text",
+				"config": {
+					"label": "Query field",
+					"placeholder": ""
+				}
+			},
+			"navigation_groups": {
+				"type": "Group",
+				"config": {
+					"label": "Navigation Groups",
+					"fields": {
+						"navigation_group": {
+							"type": "Link",
+							"config": {
+								"label": "Navigation Group",
+								"select": "document",
+								"customtypes": ["navigation_group"]
+							}
+						}
+					}
+				}
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {}
+				}
+			}
+		}
+	}
+}

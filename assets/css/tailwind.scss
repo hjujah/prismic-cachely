@@ -1,0 +1,10 @@
+@use "./utilities";
+@use "./link";
+@use "./typography";
+@use "./global";
+@use "./rich-text";
+@use "./forms";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
