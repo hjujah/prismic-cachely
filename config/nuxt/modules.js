@@ -15,6 +15,6 @@ const modules = [
   // "nuxt-delay-hydration"
 ]
 
-if (process.env.NODE_ENV !== "development") modules.push("nuxt-security")
+// if (process.env.NODE_ENV !== "development") modules.push("nuxt-security")
 
 export default modules
