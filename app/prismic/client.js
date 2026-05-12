@@ -4,7 +4,7 @@ import { repositoryName } from "~/slicemachine.config.json"
 export const cachelyPrismicClient = createCachelyPrismicClient({
   repositoryName,
   tenant: "prismic",
-  customDomain: true
+  customDomain: false
   // cachelyEndpoint: "https://prismic-cachely.synchronized.studio/~api/api/v2"
 })
 
