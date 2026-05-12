@@ -23,8 +23,7 @@
     <s-lenis class="bg-beige">
       <div
         class="page--text__wrapper text-red px-4 pt-28 sm:pt-48 md:pt-52 lg:pt-52 sm:px-12 py-20 sm:py-36 max-w-[1200px] mx-auto">
-        <h1
-          class="uppercase font-tusker sm:text-center text-24 sm:text-50 md:text-65 mb-8 sm:mb-24">
+        <h1 class="uppercase sm:text-center text-24 sm:text-50 md:text-65 mb-8 sm:mb-24">
           {{ getField(page, "title") }}
         </h1>
 
@@ -49,7 +48,7 @@
 
   .page--text__content {
     &:deep(h2) {
-      @apply font-tusker text-14 sm:text-22 md:text-24 mt-1 sm:mt-12 sm:mb-2;
+      @apply text-14 sm:text-22 md:text-24 mt-1 sm:mt-12 sm:mb-2;
     }
 
     &:deep(p) {
