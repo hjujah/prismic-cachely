@@ -3,6 +3,6 @@
   "framework": "nuxt",
   "repositoryName": "cachely-io",
   "apiOrigin": "https://cachely-io.cdn.prismic.io",
-  "cachelyEndpoint": "https://prismic.cachely.io/~api/api/v2",
+  "cachelyEndpoint": "https://prismic-cachely.synchronized.studio/~api/api/v2",
   "recommendedClient": "~/app/prismic/client"
 }

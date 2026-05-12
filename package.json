@@ -35,7 +35,7 @@
     "vite-svg-loader": "^4.0.0"
   },
   "dependencies": {
-    "@cachely-io/sdk": "^0.8.5",
+    "@cachely-io/sdk": "^0.9.3",
     "@gtm-support/vue-gtm": "^2.0.0",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@nuxt/kit": "^3.12.3",
