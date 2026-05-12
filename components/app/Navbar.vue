@@ -15,6 +15,9 @@
       :item="item"
       :light="light">
     </app-nav-item>
+
+    <nuxt-link to="/?transform=czech">Czech</nuxt-link>
+    <nuxt-link to="/?transform=serbian">Serbian</nuxt-link>
   </nav>
 </template>
 

@@ -1,24 +1,31 @@
 <script setup>
   import { components } from "~/slices"
 
-  let startTime = performance.now()
+  import { cachelyPrismicClient } from "@/app/prismic/client"
 
-  const { query } = useRoute()
-
-  const config = useRuntimeConfig()
-
-  const { client } = usePrismic()
   import fetchLinks from "@/config/pageFetchLinks"
 
-  const { data: page, error } = await useAsyncData("home", async () => {
-    try {
-      return await client.getSingle("page_home", {
-        fetchLinks
-      })
-    } catch (err) {
-      console.warn("Error fetching page", err)
-    }
+  const startTime = performance.now()
+
+  const route = useRoute()
+
+  const transform = computed(() => {
+    const t = route.query.transform
+    return Array.isArray(t) ? t[0] : t
   })
+
+  const { data: page, error } = await useAsyncData(
+    () => `home-${transform.value || "default"}`,
+
+    () =>
+      cachelyPrismicClient.getSingle("page_home", {
+        fetchLinks,
+
+        cachely: {
+          transform: transform.value || null
+        }
+      })
+  )
 
   console.info(`homepage loading took ${performance.now() - startTime} milliseconds.`)
 
@@ -26,14 +33,12 @@
 
   usePageMeta(page)
 
-  const slices = getSlices(page.value)
+  const slices = computed(() => getSlices(page.value))
 </script>
-
 <template>
   <main class="page page--home">
     <s-lenis class="overflow-x-hidden">
       <SliceZone
-        v-once
         :components="components"
         :slices="slices" />
       <AppFooter />

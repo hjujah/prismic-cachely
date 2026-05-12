@@ -1,8 +1,14 @@
 /**
- * This module exports the resolved Tailwind configuration object.
+ * Returns a resolved-theme-like object for browser-safe access to Tailwind values.
+ * Reads from utils/themeConfig.js — no Tailwind CJS internals in browser runtime.
  *
- * @module resolvedTailwindConfig
+ * @module useTheme
  */
-import resolveConfig from "tailwindcss/resolveConfig"
-import tailwindConfig from "@/tailwind.config.js"
-export default () => resolveConfig(tailwindConfig)
+import { screens, fontFamily } from "@/utils/themeConfig.js"
+
+export default () => ({
+  theme: {
+    screens,
+    fontFamily,
+  },
+})

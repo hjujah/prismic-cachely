@@ -1,11 +1,9 @@
-import { createClient } from "@prismicio/client"
+import { createCachelyPrismicClient } from "@cachely-io/sdk/prismic"
 import { repositoryName } from "~/slicemachine.config.json"
 
-/**
- * Prismic client
- *
- * @param {string} url
- * @param {object} options
- * @returns {Promise<object>}
- */
-export default createClient(repositoryName)
+export const cachelyPrismicClient = createCachelyPrismicClient({
+  repositoryName,
+  tenant: "prismic"
+})
+
+export default cachelyPrismicClient

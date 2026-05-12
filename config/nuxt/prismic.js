@@ -2,6 +2,7 @@
 import config from "./../../slicemachine.config.json"
 
 export default {
-	endpoint: config.repositoryName,
-	linkResolver: "~/app/prismic/linkResolver"
+  client: "~/app/prismic/client",
+  endpoint: config.repositoryName,
+  linkResolver: "~/app/prismic/linkResolver"
 }

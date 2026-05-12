@@ -3,10 +3,10 @@
  **
  ** Docs: https://tailwindcss.com/docs/configuration
  */
-const plugin = require("tailwindcss/plugin")
-const typography = require("@tailwindcss/typography")
+import plugin from "tailwindcss/plugin.js"
+import typography from "@tailwindcss/typography"
 
-module.exports = {
+export default {
   plugins: [
     plugin(function ({ addBase }) {
       addBase({
