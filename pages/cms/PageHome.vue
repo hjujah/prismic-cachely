@@ -1,13 +1,13 @@
 <script setup>
   import { components } from "~/slices"
 
-  import { cachelyExperiments, cachelyPrismicClient } from "@/app/prismic/client"
-
   import fetchLinks from "@/config/pageFetchLinks"
 
   const startTime = performance.now()
 
   const route = useRoute()
+
+  const cachelyPrismicClient = useCachelyPrismicClient()
 
   const transform = computed(() => {
     const t = route.query.transform
@@ -17,15 +17,37 @@
   const { data: page, error } = await useAsyncData(
     () => `home-${transform.value || "default"}`,
 
-    () =>
-      cachelyPrismicClient.getSingle("page_home", {
-        fetchLinks,
+    () => {
+      const options = {
+        fetchLinks
+      }
 
-        cachely: {
-          transform: transform.value || null
+      if (transform.value) {
+        options.cachely = {
+          transform: transform.value
         }
-      })
+      }
+
+      return cachelyPrismicClient.getSingle("page_home", options)
+    }
   )
+
+  if (import.meta.server) {
+    const experiments = useCachelyExperiments()
+
+    console.info("[Cachely page SSR assignments]", experiments.getAllAssignments())
+
+    console.info("[Cachely page SSR snapshot]", experiments.dehydrate())
+  }
+
+  if (import.meta.client) {
+    const experiments = useCachelyExperiments()
+
+    console.info(
+      "[Cachely page client assignments before click]",
+      experiments.getAllAssignments()
+    )
+  }
 
   console.info(`homepage loading took ${performance.now() - startTime} milliseconds.`)
 
@@ -34,10 +56,6 @@
   usePageMeta(page)
 
   const slices = computed(() => getSlices(page.value))
-
-  onMounted(() => {
-    cachelyExperiments.autoTrack()
-  })
 </script>
 
 <template>

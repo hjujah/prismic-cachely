@@ -11,7 +11,9 @@ const modules = [
   // "@vite-pwa/nuxt",
   "@vee-validate/nuxt",
   "nuxt-font-loader",
-  "@nuxtjs/sitemap"
+  "@nuxtjs/sitemap",
+
+  "@cachely-io/sdk/nuxt"
   // "nuxt-delay-hydration"
 ]
 

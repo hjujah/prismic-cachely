@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@cachely-io/sdk':
-        specifier: ^0.10.0
-        version: 0.10.0(@prismicio/client@7.21.8)(node-fetch@3.3.2)
+        specifier: 0.11.6
+        version: 0.11.6(@nuxt/kit@3.21.4(magicast@0.5.2))(@prismicio/client@7.21.8)(node-fetch@3.3.2)
       '@gtm-support/vue-gtm':
         specifier: ^2.0.0
         version: 2.2.0(vue@3.5.33)
@@ -731,15 +731,18 @@ packages:
       commander:
         optional: true
 
-  '@cachely-io/sdk@0.10.0':
-    resolution: {integrity: sha512-MPCUSTWwkCI4Nn7IRShKjvx5RukrJBKrAwFrniEE9HU7s8+OotUcib6dzQ+QlhrCg5FGL+QZMHni1Mc80vN9+A==}
+  '@cachely-io/sdk@0.11.6':
+    resolution: {integrity: sha512-H9nfI+pIE9s8kS++21eF4ytkOs3jZGcLUa1B5dLHBxKgr2vhqtvcvjQKpxFkRmo5CBf174WU0AY+c4+zRFLA8Q==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
+      '@nuxt/kit': ^3.0.0 || ^4.0.0
       '@prismicio/client': '>=7'
       contentful: '>=10'
       node-fetch: '>=2'
     peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
       '@prismicio/client':
         optional: true
       contentful:
@@ -8289,11 +8292,12 @@ snapshots:
       cac: 6.7.14
       citty: 0.2.2
 
-  '@cachely-io/sdk@0.10.0(@prismicio/client@7.21.8)(node-fetch@3.3.2)':
+  '@cachely-io/sdk@0.11.6(@nuxt/kit@3.21.4(magicast@0.5.2))(@prismicio/client@7.21.8)(node-fetch@3.3.2)':
     dependencies:
       picocolors: 1.1.1
       prompts: 2.4.2
     optionalDependencies:
+      '@nuxt/kit': 3.21.4(magicast@0.5.2)
       '@prismicio/client': 7.21.8
       node-fetch: 3.3.2
 

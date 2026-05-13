@@ -26,6 +26,12 @@ export default defineNuxtConfig({
     url: process.env.BASE_URL
   },
 
+  cachely: {
+    tenant: "prismic",
+
+    debug: true
+  },
+
   devtools: {
     enabled: true,
     componentInspector: false
