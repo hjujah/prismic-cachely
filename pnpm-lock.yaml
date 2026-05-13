@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@cachely-io/sdk':
-        specifier: ^0.9.3
-        version: 0.9.3(@prismicio/client@7.21.8)(node-fetch@3.3.2)
+        specifier: ^0.10.0
+        version: 0.10.0(@prismicio/client@7.21.8)(node-fetch@3.3.2)
       '@gtm-support/vue-gtm':
         specifier: ^2.0.0
         version: 2.2.0(vue@3.5.33)
@@ -731,8 +731,8 @@ packages:
       commander:
         optional: true
 
-  '@cachely-io/sdk@0.9.3':
-    resolution: {integrity: sha512-BjNemQeh26nfqEVpEW2iBibXybPj/F/raaHZnZKkacOEchocLaQ7ysTghy3gt/q/1PDjzCe/Z4jtJA94JXqR8Q==}
+  '@cachely-io/sdk@0.10.0':
+    resolution: {integrity: sha512-MPCUSTWwkCI4Nn7IRShKjvx5RukrJBKrAwFrniEE9HU7s8+OotUcib6dzQ+QlhrCg5FGL+QZMHni1Mc80vN9+A==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -8289,7 +8289,7 @@ snapshots:
       cac: 6.7.14
       citty: 0.2.2
 
-  '@cachely-io/sdk@0.9.3(@prismicio/client@7.21.8)(node-fetch@3.3.2)':
+  '@cachely-io/sdk@0.10.0(@prismicio/client@7.21.8)(node-fetch@3.3.2)':
     dependencies:
       picocolors: 1.1.1
       prompts: 2.4.2
